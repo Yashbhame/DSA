@@ -205,3 +205,80 @@ for i in range(n):
     print()
 
 '''
+
+
+#12 Number crown pattern
+'''
+1             1
+1 2         2 1
+1 2 3     3 2 1
+1 2 3 4 4 3 2 1
+
+n = int(input("Enter number of rows:"))
+for i in range(1, n+1):
+    for j in range(1, i + 1):
+        print(j,end = " ")
+    for j in range(2 * (n - i)):
+        print(" ",end = " ")
+    for j in range(i , 0 , -1):
+        print(j ,end = " ")
+    print()
+'''
+
+
+
+#13 Increasing number triangle pattern
+'''
+n = int(input("Enter number:"))
+start = 1
+for i in range(n):
+    for j in range(i + 1):
+        print(start , end = " ")
+        start += 1
+    print()
+'''
+
+
+'''
+#14 Increasing letter triangle pattern
+n = int(input("Enter number:"))
+for i in range(n):
+    for j in range(i + 1):
+        print(chr(65 + j) , end = " ")
+    print()
+'''
+
+
+'''
+#15 
+n = int(input("Enter number:"))
+for i in range(n):
+    for j in range(n - i):
+        print(chr(65 + j) , end = " ")
+    print()
+'''
+
+'''
+#16
+n = int(input("Enter number:"))
+for i in range(n):
+    for j in range(i + 1):
+        print(chr(65 + i) , end = " ")
+    print()
+'''
+
+
+#17
+n = int(input("ENTER NUMBER:"))
+for i in range(n):
+    for j in range(n - i - 1):
+        print(" ",end = "")
+    ch = ord('A')
+    breakpoint = (2 * i + 1) // 2
+    for j in range(1,2 * i + 2):
+        print(chr(ch), end="")
+        if j <= breakpoint:
+            ch += 1
+        else:
+            ch -= 1
+    print()
