@@ -269,6 +269,7 @@ for i in range(n):
 
 
 #17
+'''
 n = int(input("ENTER NUMBER:"))
 for i in range(n):
     for j in range(n - i - 1):
@@ -281,4 +282,15 @@ for i in range(n):
             ch += 1
         else:
             ch -= 1
+    print()
+'''
+
+
+#18
+n = int(input("Enter number of rows:"))
+for i in range(1, n + 1):
+    char = ord('A')
+    for j in range (i):
+        print(chr(char + n + j -i), end = " ")
+        
     print()
