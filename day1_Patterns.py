@@ -287,10 +287,72 @@ for i in range(n):
 
 
 #18
+'''
 n = int(input("Enter number of rows:"))
 for i in range(1, n + 1):
     char = ord('A')
     for j in range (i):
         print(chr(char + n + j -i), end = " ")
         
+    print()
+'''
+
+
+#19
+'''
+n = int(input("Enter number of rows:"))
+inis = 0
+for i in range(n):
+    print("*" * (n - i), end = "")
+    print(" " * inis, end = "")
+    print("*" * (n - i))
+    inis += 2
+
+inis = 2 * (n - 1)
+for i in range(1, n + 1):
+    print("*" * i, end = "")
+    print(" " * inis, end = "")
+    print("*" * i)
+    inis -= 2
+'''
+
+
+#20
+'''
+n = int(input("Enter number of rows:"))
+inis = (n * 2 - 2)
+for i in range(n):
+    print("*" * (i + 1), end = "")
+    print(" " * inis, end = "")
+    print("*" * (i + 1))
+    inis -= 2
+for i in range(n - 1):
+    print("*" * (n - i - 1), end = "")
+    print(" " * (2 * i + 2), end = "")
+    print("*" * (n - i - 1))
+'''
+
+
+#21
+'''
+n = int(input("Enter number of rows:"))
+for i in range(n):
+    if i == 0 or i == n - 1:
+        print("*" * n, end = "")
+    else:
+        print("*" + " " * (n - 2) + "*", end = "")
+    print()
+'''
+
+#22
+n = int(input("Enter number of rows:"))
+for i in range(2 * n - 1):
+    for j in range(2 * n - 1):
+        top = i
+        left = j
+        right = (2 * n - 2) - j
+        bottom = (2 * n - 2) - i
+
+        min_distance = min(top, left, right, bottom)
+        print(n - min_distance, end = " ")
     print()
