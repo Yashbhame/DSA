@@ -34,10 +34,7 @@ class Palindrome:
             number = number // 10
             revnum = (revnum * 10) + last_digit
         print(revnum)
-        if revnum == n:
-            return True
-        else:
-            return False
+        return revnum == n
         
 obj2 = Palindrome()
 num = int(input("Enter a number:"))
@@ -70,7 +67,7 @@ class Solution:
     def getDivisors(self, N):
         res = []
 
-        for i in range(1, int(math.isqrt(N)) + 1):
+        for i in range(1, math.isqrt(N) + 1):
             if N % i == 0:
                 res.append(i)
                 if i != N // i:

@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
 #2: Factorial of a number
 def fact(n):
-  
+
     # BASE CONDITION
     if n == 0:
         return 1
@@ -67,5 +67,5 @@ n = 5
 print("Fibonacci series of 5 numbers is :",end=" ")
 
 # for loop to print the fibonacci series.
-for i in range(0,n): 
+for i in range(n): 
     print(fib(i),end=" ")

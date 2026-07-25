@@ -1,6 +1,7 @@
+'''
 class Solution:
     def printName(self,name,count,N):
-        if count == N:
+        if count > N:
             return
 
         print(name)
@@ -13,4 +14,37 @@ if __name__ == "__main__":
     N = 6
     name = "Yash"
 
-    sol.printName(name, 0, N)
+    sol.printName(name, 1, N)
+
+class Solution2:
+    def recursion(self,count,n):
+        if count > n:
+            return
+        print(count, end = " ")
+        self.recursion(count + 1,n)
+
+sol = Solution2()
+sol.recursion(1,5)
+
+class Sol2_backtrack:
+    def recursion(self,count,n):
+        if count == 0:
+            return
+        self.recursion(count - 1,n)
+        print(count ,end=" ")
+
+sol = Sol2_backtrack()
+sol.recursion(5,5)
+'''
+
+
+class Solution3:
+    def reverse(self,count,n):
+        if count > n:
+            return
+        self.reverse(count + 1,n)
+        print(count ,end=" ")
+
+sol = Solution3()
+sol.reverse(1,5)
+
