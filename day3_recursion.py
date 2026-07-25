@@ -35,7 +35,6 @@ class Sol2_backtrack:
 
 sol = Sol2_backtrack()
 sol.recursion(5,5)
-'''
 
 
 class Solution3:
@@ -48,3 +47,23 @@ class Solution3:
 sol = Solution3()
 sol.reverse(1,5)
 
+
+class SumOfDigits:
+    def add(self,n):
+        if n == 0:
+            return 0
+        last_digit = n % 10
+        return last_digit + self.add(n // 10)
+        
+
+solution = SumOfDigits()
+print(solution.add(1234))
+'''
+
+class Power:
+    def powerOfNum(self,x,n):
+        if n == 0:
+            return 1
+        return x * self.powerOfNum(x, n - 1)
+solution = Power()
+print(solution.powerOfNum(2,5))
